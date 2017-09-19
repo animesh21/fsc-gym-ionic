@@ -1,0 +1,57 @@
+<ion-view view-title="Create Workout">
+    <ion-content>
+        <form ng-submit="appCtrl.createWorkout(data)" name="workoutForm">
+            <div class="card">
+                <label class="item item-input item-select" data-tap-disabled="true">
+                    Category&nbsp;
+                    <select ng-model="data.gym_category" ng-change="appCtrl.getGymExercise()">
+                        <option ng-repeat="category in appCtrl.gymCategories track by category.pk"
+                                value="{{ category.pk }}">
+                            {{ category.name }}
+                        </option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="card" ng-if="data.gym_category">
+                <label class="item item-input item-select" data-tap-disabled="true">
+                    Exercise&nbsp;
+                    <select ng-model="data.gym_exercise">
+                        <option ng-repeat="exercise in appCtrl.gymExercises track by exercise.pk"
+                                value="{{ exercise.pk }}">
+                            {{ exercise.name }}
+                        </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <div class="row">
+                    <label class="item item-input">
+                        <span>Reps:</span>
+                        <input style="border:1px solid #111;text-align: center;"
+                               type="number" ng-model="data.reps">
+                    </label>
+                </div>
+                <div class="row">
+                    <label class="item item-input">
+                        <span>Sets:</span>
+                        <input style="border:1px solid #111;text-align: center;"
+                               type="number" ng-model="data.sets">
+                    </label>
+                </div>
+            </div>
+            <ionic-durationpicker idp-label="Exercise Duration" idp-label-icon="ion-clock"
+                                  idp-output="data.duration" idp-config="data.idpconfig">
+            </ionic-durationpicker>
+
+            <ion-item>
+                <label class="item form-button">
+                    <button class="button button-block button-primary"
+                            ng-disabled="!workoutForm.$valid" type="submit">
+                        Create Workout
+                    </button>
+                </label>
+            </ion-item>
+        </form>
+    </ion-content>
+</ion-view>

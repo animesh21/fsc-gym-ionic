@@ -1,0 +1,27 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-positive">
+        <h1 class="title">Booking</h1>
+        <button class="button modal-select-close-button" ng-click="appCtrl.closeModal()">Close</button>
+    </ion-header-bar>
+
+    <ion-content scroll="false">
+        <ion-list ng-if="!day && slot">
+            <ion-item ng-repeat="day in days | orderBy: 'pk'">
+                <a class="item-content" ng-click="appCtrl.selectDay(day.pk)">
+                    {{ day.name }}
+                </a>
+            </ion-item>
+        </ion-list>
+        <ion-list ng-if-start="!slot && day">
+            <ion-item><h2 class="red-background text-center white" style="padding:12px 0px 12px 0px; font-size:20px;">
+                {{ day_name }}</h2></ion-item>
+        </ion-list>
+        <ion-list ng-if-end>
+            <ion-item>
+                <a class="item-content" ng-repeat="slot in slots track by slot.pk" ng-click="appCtrl.bookSlot(slot.pk)">
+                    {{ slot.start_time }}
+                </a>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-modal-view>

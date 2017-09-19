@@ -1,0 +1,10 @@
+<ion-view view-title="Daily Weights">
+    <ion-content>
+        <ion-list>
+            <ion-label>Weights</ion-label>
+            <ion-item ng-repeat="weight in dailyWeightCtrl.dailyWeights">
+                Weight on {{ weight.date }}: &nbsp; {{ weight.weight }} kg
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

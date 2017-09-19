@@ -1,0 +1,35 @@
+/* Empty. Add your own CSS if you like */
+.box-title-sub-left{font-size:9px; display:block; position:relative; top:-4px;}
+.box{width:100%; border:1px solid #fff;}
+.slideshow{margin:auto 0;}
+.text-center{text-align:center;}
+.heading-title{ margin-top:12px;}
+h1,h2,h3,h4,h5,h6{font-family: 'Source Sans Pro', sans-serif;}
+.headingcolor{ background:#000!important; color:#fff;}
+.box-data{background:#fff; box-shadow:1px 1px 1px 1px #e5e5e5; text-align:center; margin-top:6px; min-height:100px; padding:122px;}
+.box-data i{font-size:47px;}
+.box-data span{font-size:15px; display:block; text-align:center; color:#000; padding-top:25px!important;}
+
+.box-data1{background:#fff; box-shadow:1px 1px 1px 1px #e5e5e5; text-align:center; margin-top:6px; padding:132px; min-height:40px;}
+.box-data1 i{font-size:47px;}
+.box-data1 span{font-size:15px; display:block; text-align:center; color:#fff; padding-top:3px!important;}
+.remove-border{ border:none;}
+.red-background{background:#f96332;}
+.message-title{margin-top:12px; color:#FFFFFF; font-size:15px;}
+.white{color:#FFFFFF!important;}
+.list-inline{ width:100%;}
+.list-inline li{ display:inline-table;  padding:12px 0px 12px 0px; height:30px;}
+list-inline li a span{ padding:20px 0px 20px 0px!important; display:block; }
+
+.popup-buttons button {
+  background-color: #e86549;
+  color: white;
+}
+
+.popup-head {
+  background-color: #e86549;
+}
+
+.popup-title {
+  color: white;
+}

@@ -1,0 +1,54 @@
+<ion-view view-title="Home">
+  <ion-pane>
+    <ion-content>
+      <ion-list>
+        <div class="row red-background">
+          <div class="col">
+            <!--<ul class="list-inline">
+              <li><a class="tab-item tab-item-active"><span class="tab-title ng-binding">Daliy</span></a></li>
+              <li><a class="tab-item tab-item-active"><span class="tab-title ng-binding">News</span></a></li>
+              <li><a class="tab-item tab-item-active"><span class="tab-title ng-binding">Nutrition</span></a></li>
+            </ul>-->
+          </div>
+        </div>
+        <div class="row red-background">
+          <div class="col">
+            <h3 class="text-center" style="margin-top:12px; color:#FFFFFF;">Today's Story</h3>
+          </div>
+        </div>
+        <div class="row row-wrap row-no-padding">
+          <ion-item class="col" style="min-height:190px; margin:auto 0px;">
+            <ion-content scroll="false">
+              <ion-slide-box class="slideshow" does-continue="true" show-pager="false" slide-interval="3000"auto-play="true" on-slide-changed="slideChanged(index)">
+                <ion-slide>
+                  <!--<div class="box"> <img src="img/1.jpg" alt="" /></div>-->
+                  <div class="box"> <img src="img/1.jpg" alt="" /></div>
+                </ion-slide>
+                <ion-slide>
+                  <div class="box"> <img src="img/1.jpg" alt="" /></div>
+                </ion-slide>
+                <ion-slide>
+                  <div class="box"><img src="img/1.jpg" alt="" /></div>
+                </ion-slide>
+              </ion-slide-box>
+            </ion-content>
+          </ion-item>
+        </div>
+        <div class="row red-background">
+          <div class="col">
+            <p class="text-center message-title">{{ storiesCtrl.current_story['title'] }}</p>
+          </div>
+        </div>
+        <div class="row row-wrap row-no-padding category-items">
+          <div class="col col-50 remove-border">
+            <div class="col col-75 col-offset-10 box-data" ng-click="storiesCtrl.changeStory(1)"> <span class="text-center">Yesterday<br/>
+              Story</span> </div>
+          </div>
+          <div class="col col-50 remove-border">
+            <div class="col col-75 col-offset-10 box-data text-center" ng-click="storiesCtrl.changeStory(2)"><span class="">Day Before Yesterday Story</span> </div>
+          </div>
+        </div>
+      </ion-list>
+    </ion-content>
+  </ion-pane>
+</ion-view>

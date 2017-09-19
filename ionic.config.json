@@ -1,0 +1,9 @@
+{
+  "name": "sidapp",
+  "app_id": "90154850",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic1",
+  "watchPatterns": []
+}

@@ -1,0 +1,41 @@
+<ion-view title="Exercise Categories">
+    <ion-pane class="pane">
+        <ion-content class="scroll-content ionic-scroll  has-header">
+            <div class="scroll" style="transform: translate3d(0px, 0px, 0px) scale(1);">
+                <ion-list class="disable-user-behavior">
+                    <div class="list">
+                        <div class="row row-wrap category-items" ng-click="categoriesCtrl.getExercises(category.pk, category.name)"
+                             ng-repeat="category in categoriesCtrl.categories | orderBy: 'pk'">
+                            <div class="category-item-image col col-20"><img src="img/1.png" alt="Description"
+                                                                             class="img-set"></div>
+                            <div class="category-item-tools col col-80">
+                                <strong>{{ category.name }}</strong><br/>
+                                {{ category.description }} </div>
+                        </div>
+                    </div>
+                </ion-list>
+            </div>
+            <div class="scroll-bar scroll-bar-v">
+                <div class="scroll-bar-indicator scroll-bar-fade-out"
+                     style="transform: translate3d(0px, 0px, 0px) scaleY(1); height: 373px;"></div>
+            </div>
+        </ion-content>
+    </ion-pane>
+</ion-view>
+<style type="text/css">
+    .img-set {
+        display: inline !important;
+        padding: 4px 4px;
+        position: absolute;
+        top: 9px;
+        left: 7px;
+    }
+
+    hr {
+        background: #ccc !important;
+    }
+
+    .category-items {
+        border-bottom: 2px solid #ccc;
+    }
+</style>

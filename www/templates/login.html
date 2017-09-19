@@ -1,0 +1,27 @@
+<ion-view view-title="Login" hide-nav-bar="true" class="full-page-bckg">
+	<ion-content has-bouncing="false">
+		<form ng-submit="loginCtrl.doLogin(data)" name="loginForm" class="invision-form">
+			<div class="list list-inset">
+				<div class="item logo-big">
+					<img src="img/logo.png" alt="logo" />
+				</div>
+				<label class="item item-input">
+					<i class="icon ion-person placeholder-icon"></i>
+					<input type="text" ng-model="data.username" required placeholder="Username">
+				</label>
+				<label class="item item-input">
+					<i class="icon ion-lock-combination placeholder-icon"></i>
+					<input type="password" ng-model="data.password" required ng-minlength="8" placeholder="Password">
+				</label>
+				<label class="item form-button">
+					<button class="button button-block button-primary"
+                            ng-disabled="!loginForm.$valid" type="submit">Log in</button>
+				</label>
+				<div class="row form-links">
+					<div class="col"><a data-ui-sref="app.register">Create Account</a></div>
+					<div class="col right-align"><a data-ui-sref="app.help">Need Help?</a></div>
+				</div>
+			</div>
+		</form>
+	</ion-content>
+</ion-view>

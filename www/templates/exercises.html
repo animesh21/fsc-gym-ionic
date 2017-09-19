@@ -1,0 +1,24 @@
+<ion-view>
+    <ion-nav-title>Exercise</ion-nav-title>
+    <ion-pane>
+        <ion-content>
+            <ion-list>
+                <ion-item class="category-ion-item" ng-repeat="exercise in exerciseCtrl.exercises | orderBy:'pk'">
+                    <div class="row row-wrap category-items">
+                        <div class="col">
+                            <div class="category-item-tools">
+                                <h3>{{ exercise.name }}</h3>
+                                <div class="row">
+                                    <div class="col col-40"><i class="icon ion-radio-waves"></i>{{ exercise.description }}
+                                    </div>
+                                    <div class="col col-60 right-align item-category"><i
+                                            class="icon ion-clock"></i>Add to Workouts</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-pane>
+</ion-view>
